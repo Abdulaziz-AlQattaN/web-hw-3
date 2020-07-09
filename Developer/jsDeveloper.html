@@ -64,7 +64,6 @@
     final test  /50
     oral        /15 
 -->
-
 <!-- تقوم الآلة الحاسبة بإجراء الحسابات اللازمة لحساب مجموع درجاتك بحيث -->
 <!-- 
     90 - 100                 A
@@ -118,3 +117,110 @@
     #                                                                #
     ------------------------------------------------------------------
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .box1 {
+        height: 45%;
+        width: 55%;
+        background-color: #eeeeee;
+        box-shadow: 1px solid rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 0px 48px 5px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0px 0px 48px 5px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 48px 5px rgba(0, 0, 0, 0.6);
+      }
+      .items {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+      }
+      .text1 {
+        font-size: 47px;
+        font-weight: bold;
+        margin-top: 60px;
+      }
+      .text2 {
+        margin-top: 20px;
+      }
+      form {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .inputs {
+        border: none;
+        outline: none;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      .btn {
+        padding: 2px 20px 0px 20px;
+      }
+      .text3 {
+        margin-top: 20px;
+      }
+      .text3 p {
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="items">
+        <div class="text1"><p>Grade Calculator</p></div>
+        <div class="text2"><p>Input your grades separated by commas:</p></div>
+        <form>
+          <input
+            class="inputs"
+            type="number"
+            id="quizes"
+            placeholder="Quizes of 10"
+          />
+          <input
+            class="inputs"
+            type="number"
+            id="midterm"
+            placeholder="Midterm of 25"
+          />
+          <input
+            class="inputs"
+            type="number"
+            id="finaltest"
+            placeholder="Final Test of 50"
+          />
+          <input
+            class="inputs"
+            type="number"
+            id="oral"
+            placeholder="Oral of 15"
+          />
+          <button class="btn" id="buton">Calculate</button>
+        </form>
+        <div class="text3"></div>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
