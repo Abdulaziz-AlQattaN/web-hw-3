@@ -162,7 +162,7 @@
       .text2 {
         margin-top: 20px;
       }
-      form {
+      .formy {
         margin-top: 15px;
         display: flex;
         flex-direction: column;
@@ -191,34 +191,14 @@
       <div class="items">
         <div class="text1"><p>Grade Calculator</p></div>
         <div class="text2"><p>Input your grades separated by commas:</p></div>
-        <form>
-          <input
-            class="inputs"
-            type="number"
-            id="quizes"
-            placeholder="Quizes of 10"
-          />
-          <input
-            class="inputs"
-            type="number"
-            id="midterm"
-            placeholder="Midterm of 25"
-          />
-          <input
-            class="inputs"
-            type="number"
-            id="finaltest"
-            placeholder="Final Test of 50"
-          />
-          <input
-            class="inputs"
-            type="number"
-            id="oral"
-            placeholder="Oral of 15"
-          />
-          <button class="btn" id="buton">Calculate</button>
-        </form>
-        <div class="text3"></div>
+        <div class="formy">
+          <input class="inputs" type="number" id="quiz" />
+          <input class="inputs" type="number" id="mid" />
+          <input class="inputs" type="number" id="final" />
+          <input class="inputs" type="number" id="oral" />
+        </div>
+        <button class="btn" onclick="ClickMe()">Calculate</button>
+        <div class="text3" id="text3"></div>
       </div>
     </div>
     <script src="js/scripts.js"></script>

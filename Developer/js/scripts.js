@@ -74,18 +74,34 @@
 
 // allFunctions(fahrenheit, minvalue);
 
-let firstI = parseInt(document.getElementById("quizes").value);
-let secondI = parseInt(document.getElementById("midterm").value);
-let thirdI = parseInt(document.getElementById("finaltest").value);
-let fourthI = parseInt(document.getElementById("oral").value);
-let btn = document.getElementById("buton");
+function ClickMe() {
+  let quiz = parseInt(document.getElementById("quiz").value);
+  let mid = parseInt(document.getElementById("mid").value);
+  let final = parseInt(document.getElementById("final").value);
+  let oral = parseInt(document.getElementById("oral").value);
+  let sum = quiz + mid + final + oral;
 
-btn.addEventListener("click", function () {
-  firstI = firstI * 0.1;
-  secondI = firstI * 0.25;
-  thirdI = firstI * 0.5;
-  fourthI = firstI * 0.15;
-  let sum = firstI + secondI + thirdI + fourthI;
-  let input = document.getElementById("text3");
-  input.innerHTML = sum;
-});
+  let grade;
+
+  switch (true) {
+    case sum >= 90 && sum <= 100:
+      grade = "A";
+      break;
+    case sum >= 80:
+      grade = "B";
+      break;
+    case sum >= 70:
+      grade = "C";
+      break;
+    case sum >= 60:
+      grade = "D";
+    case sum < 60:
+      grade = "F";
+    default:
+      alert("Fill the fields!");
+      grade = "";
+      sum = "";
+  }
+
+  let result = (document.getElementById("text3").innerHTML = sum + " " + grade);
+}
