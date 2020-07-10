@@ -105,3 +105,14 @@ function ClickMe() {
 
   let result = (document.getElementById("text3").innerHTML = sum + " " + grade);
 }
+
+function Reset() {
+  document.getElementById("quiz").value = "";
+  document.getElementById("mid").value = "";
+  document.getElementById("final").value = "";
+  document.getElementById("oral").value = "";
+  quiz = "";
+  mid = "";
+  final = "";
+  oral = "";
+}
