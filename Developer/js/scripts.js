@@ -114,5 +114,5 @@ function Reset() {
   quiz = "";
   mid = "";
   final = "";
-  oral = "";
+  oral = ""; //
 }
